@@ -6,7 +6,8 @@ export default class View {
     }
 
     elements = {
-        tableList: document.querySelector('#tbody')
+        tableList: document.querySelector('#tbody'),
+        productSelect: document.querySelector('#productSelect')
     }
 
     renderHTML(usersObj) {
@@ -29,5 +30,19 @@ export default class View {
         </tr>`;
 
         this.elements.tableList.insertAdjacentHTML('beforeend', taskHTML);
+    }
+
+    clearTabeleUser() {
+        this.elements.tableList.innerHTML = '';
+    }
+
+    renderFilterTasks(type, data) {
+        data.forEach((user) => {
+            if(user.product === type) {
+                this.renderHTML(user);
+            }else if(type === 'Все продукты') {
+                this.renderHTML(user);
+            }
+        })
     }
 }
