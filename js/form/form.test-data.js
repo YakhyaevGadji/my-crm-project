@@ -16,7 +16,6 @@ let testData = (function() {
         new ExampleItem('Сафонова Александра', '8(1014)562-30-08', 'lattomadava-3179@yopmail.com')
     ]
     
-    
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
@@ -27,8 +26,6 @@ let testData = (function() {
         document.querySelector('#name').value = elem.type;
         document.querySelector('#phone').value = elem.desc;
         document.querySelector('#email').value = elem.sum;
-        
-        
     }
     
     return {
