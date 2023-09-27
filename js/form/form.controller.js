@@ -9,6 +9,6 @@ view.elements.form.addEventListener('submit', setDateInInputs);
 function setDateInInputs(event) {
     event.preventDefault();
 
-    model.addUserInDate(view.elements);
+    model.addUserInDate(view.getInputs());
     testData.init();
 }
